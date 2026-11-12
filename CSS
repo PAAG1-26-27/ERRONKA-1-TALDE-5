@@ -1,0 +1,842 @@
+/* DENATEK - ESTILO OROKORRA  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #30243a;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+:root {
+    --more-iluna: #431064;
+    --morea: #68239a;
+    --more-argia: #a85bd0;
+    --lila: #ead9f5;
+    --hondoa: #faf7fc;
+    --testua: #30243a;
+    --grisa: #706779;
+    --zuria: #ffffff;
+}
+
+
+
+/* GOIBURUA */
+
+
+.goiburua {
+    min-height: 85px;
+    padding: 10px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logotipo-esteka {
+    display: flex;
+    align-items: center;
+}
+
+.logotipoa {
+    width: 125px;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+.nabigazioa {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nabigazioa a {
+    color: var(--more-iluna);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.nabigazioa a:hover {
+    color: var(--more-argia);
+}
+
+.nabigazioa .esteka-hautatua {
+    color: var(--more-argia);
+}
+
+
+
+/* AZAL NAGUSIA */
+
+
+.azal {
+    min-height: 620px;
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    border-radius: 35px;
+
+    background: linear-gradient(
+        120deg,
+        #431064,
+        #762aa4,
+        #542078
+    );
+
+    padding: 80px 25px;
+}
+
+.azal-edukia {
+    max-width: 850px;
+}
+
+.etiketa {
+    display: inline-block;
+
+    padding: 8px 20px;
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+
+    color: white;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.azal h1 {
+    font-size: clamp(38px, 6vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.azal h1 span {
+    color: #dfb9f5;
+}
+
+.azal p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #f0e5f5;
+    font-size: 18px;
+}
+
+.azal-txikia {
+    min-height: 480px;
+}
+
+
+
+/* EDUKIONTZIA   */
+
+
+.edukiontzia {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+
+/* ATALAK */
+
+
+.atal {
+    padding: 100px 0;
+}
+
+.atal-morea {
+    background-color: var(--hondoa);
+}
+
+.atal-goiburua {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.atal-etiketa {
+    color: var(--more-argia);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.atal-goiburua h2,
+.bi-zutabe h2 {
+    color: var(--more-iluna);
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 12px 0 18px;
+}
+
+.atal-sarrera {
+    color: var(--grisa);
+    font-size: 17px;
+}
+
+
+
+/* BI ZUTABE */
+
+
+.bi-zutabe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 55px;
+}
+
+.bi-zutabe p {
+    color: var(--grisa);
+    margin-bottom: 18px;
+}
+
+.nabarmendutako-kutxa {
+    padding: 35px;
+
+    background-color: #fbf7fe;
+    border: 1px solid #eadcf3;
+    border-radius: 22px;
+}
+
+.nabarmendutako-kutxa h3 {
+    color: var(--morea);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+
+
+/* ZERBITZUAK  */
+
+
+.zerbitzu-sarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.zerbitzu-txartela {
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 20px;
+    border: 1px solid #eee5f3;
+
+    transition: 0.3s;
+}
+
+.zerbitzu-txartela:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(67,16,100,0.12);
+}
+
+.zerbitzu-ikurra {
+    color: var(--more-argia);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.zerbitzu-txartela h3 {
+    color: var(--more-iluna);
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.zerbitzu-txartela p {
+    color: var(--grisa);
+}
+
+
+
+/* GASTELEKUEN IRUDIA  */
+
+
+.gasteleku-irudia {
+    min-height: 350px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 30px;
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(47,13,68,0.85),
+            transparent
+        );
+
+    background-size: cover;
+    background-position: center;
+}
+
+.irudi-mezua {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.irudi-mezua span {
+    font-size: 16px;
+}
+
+.irudi-mezua strong {
+    font-size: 25px;
+}
+
+
+/* ONURAK  */
+
+
+.onurak-sarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+.onurak-sarea div {
+    border-left: 4px solid var(--more-argia);
+    padding-left: 20px;
+}
+
+.onurak-sarea h3 {
+    color: var(--morea);
+    margin-bottom: 8px;
+}
+
+.onurak-sarea p {
+    color: var(--grisa);
+}
+
+
+
+/* BOTOIAK   */
+
+
+.atal-ekintza {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.botoi {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+    text-decoration: none;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botoi-more {
+    background-color: var(--morea);
+    color: white;
+}
+
+.botoi-more:hover {
+    background-color: var(--more-iluna);
+    transform: translateY(-3px);
+}
+
+.botoi-zuria {
+    background-color: white;
+    color: var(--more-iluna);
+}
+
+.botoi-zuria:hover {
+    background-color: var(--lila);
+}
+.botoi-kontainerra {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.botoia {
+    display: inline-block;
+    background-color: #7136a8;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botoia:hover {
+    background-color: #54247f;
+}
+
+
+/* GASTELEKUEN ARGAZKIAK  */
+
+
+.argazki-sarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.argazki-txartela {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(67,16,100,0.08);
+
+    transition: 0.3s;
+}
+
+.argazki-txartela:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(67,16,100,0.15);
+}
+
+.argazki-txartela img {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.argazki-edukia {
+    padding: 23px;
+}
+
+.argazki-edukia h3 {
+    color: var(--more-iluna);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.argazki-edukia p {
+    color: var(--grisa);
+}
+
+
+
+/* IRTEERAK ETA EGONALDIAK  */
+
+
+.irteera-sarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.irteera-txartela {
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #eee5f3;
+}
+
+.irteera-txartela h3 {
+    color: var(--morea);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.irteera-txartela p {
+    color: var(--grisa);
+}
+
+
+/* TESTU ZABALA  */
+
+.testu-zabala {
+    max-width: 850px;
+    margin: auto;
+    color: var(--grisa);
+    font-size: 17px;
+}
+
+.testu-zabala p {
+    margin-bottom: 20px;
+}
+
+
+
+/* HELBURUAK   */
+
+
+.helburu-sarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.helburu-txartela {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #eee5f3;
+}
+
+.helburu-txartela span {
+    color: var(--more-argia);
+    font-weight: bold;
+}
+
+.helburu-txartela h3 {
+    color: var(--more-iluna);
+    margin: 12px 0;
+}
+
+.helburu-txartela p {
+    color: var(--grisa);
+}
+
+
+/* HARREMANETARAKO  */
+
+
+.harremanetarako {
+    padding: 80px 0;
+
+    color: white;
+
+    background: linear-gradient(
+        110deg,
+        #542078,
+        #762aa4
+    );
+}
+
+.harreman-edukia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.harremanetarako h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.harremanetarako p {
+    color: #f0e5f5;
+}
+
+.harreman-datuak {
+    min-width: 300px;
+}
+
+.harreman-datuak p {
+    margin: 10px 0;
+}
+
+
+/* AMAIERAKO DEIA   */
+
+
+.amaierako-deia {
+    padding: 85px 20px;
+
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(
+        120deg,
+        #542078,
+        #40105f
+    );
+}
+
+.amaierako-deia h2 {
+    max-width: 800px;
+    margin: 0 auto 20px;
+
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.amaierako-deia p {
+    margin-bottom: 30px;
+    color: #eee0f6;
+}
+
+
+/* OINA   */
+
+
+.oin-oharra {
+    background-color: #251332;
+    color: white;
+    padding: 25px 0;
+}
+
+.oin-edukia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.oin-edukia p {
+    margin: 0;
+}
+
+.oin-edukia a {
+    color: white;
+    text-decoration: none;
+}
+
+.oin-edukia a:hover {
+    text-decoration: underline;
+}
+
+
+/* MUGIKORRETARAKO EGOKITZAPENA  */
+
+
+@media (max-width: 800px) {
+
+    .goiburua {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nabigazioa {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .bi-zutabe {
+        grid-template-columns: 1fr;
+    }
+
+    .zerbitzu-sarea,
+    .helburu-sarea,
+    .argazki-sarea {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .irteera-sarea {
+        grid-template-columns: 1fr;
+    }
+
+    .harreman-edukia {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .onurak-sarea {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .azal {
+        min-height: 480px;
+        padding: 55px 20px;
+        border-radius: 22px;
+    }
+
+    .azal h1 {
+        font-size: 38px;
+    }
+
+    .atal {
+        padding: 65px 0;
+    }
+
+    .atal-goiburua h2,
+    .bi-zutabe h2 {
+        font-size: 30px;
+    }
+
+    .zerbitzu-sarea,
+    .helburu-sarea,
+    .argazki-sarea {
+        grid-template-columns: 1fr;
+    }
+
+    .harremanetarako h2,
+    .amaierako-deia h2 {
+        font-size: 29px;
+    }
+
+    .oin-edukia {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* FORMULARIO GAZTELEKUA */
+
+.izen-emate-atala {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f5fc;
+}
+
+.registration-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(30, 15, 40, 0.7);
+}
+
+.registration-modal[hidden] {
+    display: none;
+}
+
+.modal-edukia {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-edukia h2 {
+    color: #42106d;
+    margin-bottom: 10px;
+}
+
+.modal-itxi {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: #42106d;
+    cursor: pointer;
+}
+
+#registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#registrationForm label {
+    color: #42106d;
+    font-weight: 600;
+}
+
+#registrationForm input,
+#registrationForm select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ded5e8;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#registrationForm input:focus,
+#registrationForm select:focus {
+    outline: 2px solid #a77ad1;
+}
+
+#registrationForm .baimen-eremua {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#registrationForm .baimen-eremua input {
+    width: auto;
+    margin-top: 4px;
+    accent-color: #70409b;
+}
+
+#registrationForm button {
+    width: 100%;
+    cursor: pointer;
+}
+
+#successMessage {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#successMessage h3 {
+    color: #42106d;
+}
+
+#successMessage[hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .modal-edukia {
+        padding: 30px 20px;
+    }
+}
+
+/* HIZKUNTZA BOTOIA */
+
+.botoi-hizkuntza {
+    padding: 6px 14px;
+    border: 2px solid var(--morea);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--more-iluna);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botoi-hizkuntza:hover {
+    background-color: var(--morea);
+    color: white;
+}
