@@ -1,0 +1,461 @@
+package com.mycompany.polikiroldegia;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.time.LocalDate;
+
+public class Menua {
+
+    // Listas
+    static ArrayList<Gaztea> listaBazkideak = new ArrayList<>();
+    static ArrayList<Ekintza> listaEkintzak = new ArrayList<>();
+    static ArrayList<Langilea> listaLangileak = new ArrayList<>();
+    static ArrayList<Monitorea> listaMonitoreak = new ArrayList<>();
+    static ArrayList<Administratzaile> listaAdministratzaileak = new ArrayList<>();
+
+    // GEHITU BAZKIDEAK
+    public static void gehituBazkideak(ArrayList<Gaztea> listaBazkideak) {
+        int aukera;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            Gaztea b1 = new Gaztea();
+
+            b1.setNAN();
+            b1.setizena();
+            b1.setabizena();
+            b1.setBazkidekodea();
+            b1.setErrolkodea();
+
+            listaBazkideak.add(b1);
+
+            System.out.println("Beste bat gehitu nahi duzu? (1 bai, 0 ez)");
+            aukera = sc.nextInt();
+
+        } while (aukera != 0);
+    }
+
+    // BISTARATU BAZKIDEAK
+    public static void bistaratuBazkideak(ArrayList<Gaztea> listaBazkideak) {
+        int i;
+
+        for (i = 0; i < listaBazkideak.size(); i++) {
+            listaBazkideak.get(i).getAll();
+        }
+    }
+
+    // GEHITU EKINTZAK
+    public static void gehituEkintzak(ArrayList<Ekintza> listaEkintzak) {
+        int aukera;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            Ekintza e1 = new Ekintza();
+
+            e1.setID();
+            e1.setizena();
+            e1.setHasieradata();
+
+            listaEkintzak.add(e1);
+
+            System.out.println("Beste bat gehitu nahi duzu? (1 bai, 0 ez)");
+            aukera = sc.nextInt();
+
+        } while (aukera != 0);
+    }
+
+    // BISTARATU EKINTZAK
+    public static void bistaratuEkintzak(ArrayList<Ekintza> listaEkintzak) {
+        int i;
+
+        for (i = 0; i < listaEkintzak.size(); i++) {
+            listaEkintzak.get(i).getAll();
+        }
+    }
+
+    // GEHITU LANGILEAK
+    public static void gehituLangileak(ArrayList<Langilea> listaLangileak) {
+        int aukera;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            Langilea l1 = new Langilea();
+
+            l1.setNAN();
+            l1.setizena();
+            l1.setabizena();
+            l1.setLangilekodea();
+
+            listaLangileak.add(l1);
+
+            System.out.println("Beste bat gehitu nahi duzu? (1 bai, 0 ez)");
+            aukera = sc.nextInt();
+
+        } while (aukera != 0);
+    }
+
+    // BISTARATU LANGILEAK
+    public static void bistaratuLangileak(ArrayList<Langilea> listaLangileak) {
+        int i;
+
+        for (i = 0; i < listaLangileak.size(); i++) {
+            listaLangileak.get(i).getAll();
+        }
+    }
+
+    // GEHITU MONITOREAK
+    public static void gehituMonitoreak(ArrayList<Monitorea> listaMonitoreak) {
+        int aukera;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            Monitorea m1 = new Monitorea();
+
+            m1.setNAN();
+            m1.setizena();
+            m1.setabizena();
+            m1.setMonitorekodea();
+
+            listaMonitoreak.add(m1);
+
+            System.out.println("Beste bat gehitu nahi duzu? (1 bai, 0 ez)");
+            aukera = sc.nextInt();
+
+        } while (aukera != 0);
+    }
+
+    // BISTARATU MONITOREAK
+    public static void bistaratuMonitoreak(ArrayList<Monitorea> listaMonitoreak) {
+        int i;
+
+        for (i = 0; i < listaMonitoreak.size(); i++) {
+            listaMonitoreak.get(i).getAll();
+        }
+    }
+
+    // GEHITU ADMINISTRATZAILEAK
+    public static void gehituAdministratzaileak(ArrayList<Administratzaile> listaAdministratzaileak) {
+        int aukera;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            Administratzaile a1 = new Administratzaile();
+
+            a1.setNAN();
+            a1.setizena();
+            a1.setabizena();
+            a1.setAdminkodea();
+
+            listaAdministratzaileak.add(a1);
+
+            System.out.println("Beste bat gehitu nahi duzu? (1 bai, 0 ez)");
+            aukera = sc.nextInt();
+
+        } while (aukera != 0);
+    }
+
+    // BISTARATU ADMINISTRATZAILEAK
+    public static void bistaratuAdministratzaileak(ArrayList<Administratzaile> listaAdministratzaileak) {
+        int i;
+
+        for (i = 0; i < listaAdministratzaileak.size(); i++) {
+            listaAdministratzaileak.get(i).getAll();
+        }
+    }
+
+    // EZABATU GAZTEA
+    public static void ezabatuGaztea(ArrayList<Gaztea> listaBazkideak, Scanner sc) {
+
+        String NAN;
+        boolean aurkitua = false;
+
+        System.out.println("Sartu ezabatu nahi duzun NAN zenbakia: ");
+        NAN = sc.next();
+
+        for (int i = 0; i < listaBazkideak.size(); i++) {
+
+            if (listaBazkideak.get(i).getNANValor().equals(NAN)) {
+
+                listaBazkideak.remove(i);
+                aurkitua = true;
+                System.out.println("Gaztea ezabatu da.");
+                break;
+            }
+        }
+
+        if (aurkitua == false) {
+            System.out.println("Ez da NAN hori duen gazterik aurkitu.");
+        }
+    }
+
+    // EZABATU EKINTZA
+    public static void ezabatuEkintza(ArrayList<Ekintza> listaEkintzak, Scanner sc) {
+
+        int ID;
+        boolean aurkitua = false;
+
+        System.out.println("Sartu ezabatu nahi duzun ID-a: ");
+        ID = sc.nextInt();
+
+        for (int i = 0; i < listaEkintzak.size(); i++) {
+
+            if (listaEkintzak.get(i).getIDValor() == ID) {
+
+                listaEkintzak.remove(i);
+                aurkitua = true;
+                System.out.println("Ekintza ezabatu da.");
+                break;
+            }
+        }
+
+        if (aurkitua == false) {
+            System.out.println("Ez da ID hori duen ekintzarik aurkitu.");
+        }
+    }
+
+    // EZABATU LANGILEA
+    public static void ezabatuLangilea(ArrayList<Langilea> listaLangileak, Scanner sc) {
+
+        String NAN;
+        boolean aurkitua = false;
+
+        System.out.println("Sartu ezabatu nahi duzun NAN zenbakia: ");
+        NAN = sc.next();
+
+        for (int i = 0; i < listaLangileak.size(); i++) {
+
+            if (listaLangileak.get(i).getNANValor().equals(NAN)) {
+
+                listaLangileak.remove(i);
+                aurkitua = true;
+                System.out.println("Langilea ezabatu da.");
+                break;
+            }
+        }
+
+        if (aurkitua == false) {
+            System.out.println("Ez da NAN hori duen langilerik aurkitu.");
+        }
+    }
+
+    // EZABATU MONITOREA
+    public static void ezabatuMonitorea(ArrayList<Monitorea> listaMonitoreak, Scanner sc) {
+
+        String NAN;
+        boolean aurkitua = false;
+
+        System.out.println("Sartu ezabatu nahi duzun NAN zenbakia: ");
+        NAN = sc.next();
+
+        for (int i = 0; i < listaMonitoreak.size(); i++) {
+
+            if (listaMonitoreak.get(i).getNANValor().equals(NAN)) {
+
+                listaMonitoreak.remove(i);
+                aurkitua = true;
+                System.out.println("Monitorea ezabatu da.");
+                break;
+            }
+        }
+
+        if (aurkitua == false) {
+            System.out.println("Ez da NAN hori duen monitorerik aurkitu.");
+        }
+    }
+
+    // EZABATU ADMINISTRATZAILEA
+    public static void ezabatuAdministratzailea(ArrayList<Administratzaile> listaAdministratzaileak, Scanner sc) {
+
+        String NAN;
+        boolean aurkitua = false;
+
+        System.out.println("Sartu ezabatu nahi duzun NAN zenbakia: ");
+        NAN = sc.next();
+
+        for (int i = 0; i < listaAdministratzaileak.size(); i++) {
+
+            if (listaAdministratzaileak.get(i).getNANValor().equals(NAN)) {
+
+                listaAdministratzaileak.remove(i);
+                aurkitua = true;
+                System.out.println("Administratzailea ezabatu da.");
+                break;
+            }
+        }
+
+        if (aurkitua == false) {
+            System.out.println("Ez da NAN hori duen administratzailerik aurkitu.");
+        }
+    }
+
+    // MAIN
+    public static void main(String[] args) {
+
+        int aukera;
+        int azpiAukera;
+
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            System.out.println("\n--- MENU NAGUSIA ---");
+            System.out.println("1 - Gehitu");
+            System.out.println("2 - Bistaratu");
+            System.out.println("3 - Ezabatu");
+            System.out.println("0 - Irten");
+
+            aukera = sc.nextInt();
+
+            switch (aukera) {
+
+                // GEHITU
+                case 1:
+
+                    do {
+                        System.out.println("\n--- GEHITU ---");
+                        System.out.println("1 - Gaztea");
+                        System.out.println("2 - Ekintza");
+                        System.out.println("3 - Langilea");
+                        System.out.println("4 - Monitorea");
+                        System.out.println("5 - Administratzailea");
+                        System.out.println("0 - Atzera");
+
+                        azpiAukera = sc.nextInt();
+
+                        switch (azpiAukera) {
+
+                            case 1:
+                                gehituBazkideak(listaBazkideak);
+                                break;
+
+                            case 2:
+                                gehituEkintzak(listaEkintzak);
+                                break;
+
+                            case 3:
+                                gehituLangileak(listaLangileak);
+                                break;
+
+                            case 4:
+                                gehituMonitoreak(listaMonitoreak);
+                                break;
+
+                            case 5:
+                                gehituAdministratzaileak(listaAdministratzaileak);
+                                break;
+
+                            case 6:
+                                break;
+
+                            default:
+                                System.out.println("Aukera ez da zuzena.");
+                        }
+
+                    } while (azpiAukera != 0);
+
+                    break;
+
+                // BISTARATU
+                case 2:
+
+                    do {
+                        System.out.println("\n--- BISTARATU ---");
+                        System.out.println("1 - Gazteak");
+                        System.out.println("2 - Ekintzak");
+                        System.out.println("3 - Langileak");
+                        System.out.println("4 - Monitoreak");
+                        System.out.println("5 - Administratzaileak");
+                        System.out.println("0 - Atzera");
+
+                        azpiAukera = sc.nextInt();
+
+                        switch (azpiAukera) {
+
+                            case 1:
+                                bistaratuBazkideak(listaBazkideak);
+                                break;
+
+                            case 2:
+                                bistaratuEkintzak(listaEkintzak);
+                                break;
+
+                            case 3:
+                                bistaratuLangileak(listaLangileak);
+                                break;
+
+                            case 4:
+                                bistaratuMonitoreak(listaMonitoreak);
+                                break;
+
+                            case 5:
+                                bistaratuAdministratzaileak(listaAdministratzaileak);
+                                break;
+
+                            case 6:
+                                break;
+
+                            default:
+                                System.out.println("Aukera ez da zuzena.");
+                        }
+
+                    } while (azpiAukera != 0);
+
+                    break;
+
+                // EZABATU
+                case 3:
+
+                    do {
+                        System.out.println("\n--- EZABATU ---");
+                        System.out.println("1 - Gaztea (NAN)");
+                        System.out.println("2 - Ekintza (ID)");
+                        System.out.println("3 - Langilea (NAN)");
+                        System.out.println("4 - Monitorea (NAN)");
+                        System.out.println("5 - Administratzailea (NAN)");
+                        System.out.println("0 - Atzera");
+
+                        azpiAukera = sc.nextInt();
+
+                        switch (azpiAukera) {
+
+                            case 1:
+                                ezabatuGaztea(listaBazkideak, sc);
+                                break;
+
+                            case 2:
+                                ezabatuEkintza(listaEkintzak, sc);
+                                break;
+
+                            case 3:
+                                ezabatuLangilea(listaLangileak, sc);
+                                break;
+
+                            case 4:
+                                ezabatuMonitorea(listaMonitoreak, sc);
+                                break;
+
+                            case 5:
+                                ezabatuAdministratzailea(listaAdministratzaileak, sc);
+                                break;
+
+                            case 6:
+                                break;
+
+                            default:
+                                System.out.println("Aukera ez da zuzena.");
+                        }
+
+                    } while (azpiAukera != 0);
+
+                    break;
+
+                case 4:
+                    System.out.println("Programa amaitu da.");
+                    break;
+
+                default:
+                    System.out.println("Aukera ez da zuzena.");
+            }
+
+        } while (aukera != 0);
+    }
+}
