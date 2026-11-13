@@ -113,39 +113,36 @@ public static void ahorkadoa() {
 
 }//ahorkadoa metodoa
 
-        public static void asmatuZenb() {
+    public void asmatuZenb(){
         //enuntziatua
         System.out.println("\nAusaz 1 eta 100 bitartean dagoen zenbaki bat aukeratuko da eta zuk asmatu behar duzu. 6 saiakera dituzu.\n");
         //aldagaiak
-        int asmatuBehar, saiakera, i, s;
+        int asmatuBehar, saiakera, i;
         asmatuBehar = (int) ((Math.random() * 100));
-        saiakera = 0;
-        s = 6;
+        saiakera = 6;
         //scanner
         Scanner myObj = new Scanner(System.in);
         //while
-        while (saiakera < 6) {
+        while (saiakera > 0) {
             System.out.print("Sartu zenbaki bat: ");
             i = myObj.nextInt();
-            saiakera = saiakera + 1;
-
-            //asmatu zenbakia
+        //asmatu zenbakia
             if (i == asmatuBehar) {
-                saiakera = 6;
+                saiakera = 0;
                 System.out.println("\nZenbakia asmatu duzu, ZORIONAK!!!");
             }
             else if (i > asmatuBehar) {
                 System.out.println("\nZenbakia txikiagoa da, saiatu berriro.");
-                s = s -1;
-                System.out.println("Saiakera kopurua: " + s + "\n");
+                saiakera = saiakera - 1;
+                System.out.println("Saiakera kopurua: " + saiakera + "\n");
             }
             else {
                 System.out.println("\nZenbakia handiagoa da, saiatu berriro.");
-                s = s -1;
-                System.out.println("Saiakera kopurua: " + s + "\n");
+                saiakera = saiakera - 1;
+                System.out.println("Saiakera kopurua: " + saiakera + "\n");
             }
-            //jolasa galdu
-            if (saiakera == 6 && i != asmatuBehar) {
+            //erabiltzaileak jolasa galdu du
+            if (saiakera == 0 && i != asmatuBehar) {
                 System.out.println("Saiakerarik gabe geratu zara, hurrengoan izango da.");
             }//if
         }//while
